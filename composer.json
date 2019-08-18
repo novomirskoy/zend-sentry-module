@@ -1,0 +1,24 @@
+{
+    "name": "novomirskoy/zend-sentry-module",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Endin Artyom",
+            "email": "artyom.endin@gmail.com"
+        }
+    ],
+    "require": {
+        "sentry/sentry": "1.10.0.*",
+        "zendframework/zendframework": "2.4.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Novomirskoy\\SentryModule\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
