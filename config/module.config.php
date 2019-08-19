@@ -6,7 +6,11 @@ return [
 
         'handleExceptions' => true,
         'handleErrors' => true,
-        'handlesShutdownErrors' => true,
+        'handleShutdownErrors' => true,
+
+        'errorReporting' => -1,
+        'callExistingExceptionHandler' => true,
+        'callExistingErrorHandler' => true,
 
         'apiKey' => '',
 

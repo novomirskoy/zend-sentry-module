@@ -31,6 +31,21 @@ final class ModuleOptions extends AbstractOptions
     private $handleShutdownErrors;
 
     /**
+     * @var int
+     */
+    private $errorReporting;
+
+    /**
+     * @var bool
+     */
+    private $callExistingExceptionHandler;
+
+    /**
+     * @var bool
+     */
+    private $callExistingErrorHandler;
+
+    /**
      * @var string
      */
     private $apiKey;
@@ -38,7 +53,7 @@ final class ModuleOptions extends AbstractOptions
     /**
      * @var array
      */
-    private $ravenConfig;
+    private $ravenConfig = [];
 
     /**
      * @return bool
@@ -109,6 +124,60 @@ final class ModuleOptions extends AbstractOptions
     public function setHandleShutdownErrors($handleShutdownErrors)
     {
         $this->handleShutdownErrors = $handleShutdownErrors;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getErrorReporting()
+    {
+        return $this->errorReporting;
+    }
+
+    /**
+     * @param int $errorReporting
+     * @return ModuleOptions
+     */
+    public function setErrorReporting($errorReporting)
+    {
+        $this->errorReporting = $errorReporting;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCallExistingExceptionHandler()
+    {
+        return $this->callExistingExceptionHandler;
+    }
+
+    /**
+     * @param bool $callExistingExceptionHandler
+     * @return ModuleOptions
+     */
+    public function setCallExistingExceptionHandler($callExistingExceptionHandler)
+    {
+        $this->callExistingExceptionHandler = $callExistingExceptionHandler;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCallExistingErrorHandler()
+    {
+        return $this->callExistingErrorHandler;
+    }
+
+    /**
+     * @param bool $callExistingErrorHandler
+     * @return ModuleOptions
+     */
+    public function setCallExistingErrorHandler($callExistingErrorHandler)
+    {
+        $this->callExistingErrorHandler = $callExistingErrorHandler;
         return $this;
     }
 
